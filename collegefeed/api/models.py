@@ -38,7 +38,7 @@ class undergradcounters(models.Model):
 	undergradid=models.IntegerField(primary_key=True)
 	undergradtitle=models.TextField(unique=False)
 	def __unicode__(self):
-	 	return self.mphiltitle
+	 	return self.undergradtitle
 
 
 class undergradresults(models.Model):
@@ -54,7 +54,7 @@ class postgradcounters(models.Model):
 	postgradid=models.IntegerField(primary_key=True)
 	postgradtitle=models.TextField(unique=False)
 	def __unicode__(self):
-	 	return self.mphiltitle
+	 	return self.postgradtitle
 
 
 class postgradresults(models.Model):
@@ -68,7 +68,7 @@ class diplomacounters(models.Model):
 	diplomaid=models.IntegerField(primary_key=True)
 	diplomatitle=models.TextField(unique=False)
 	def __unicode__(self):
-	 	return self.mphiltitle
+	 	return self.diplomatitle
 
 
 class diplomaresults(models.Model):
