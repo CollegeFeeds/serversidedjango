@@ -11,9 +11,19 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
+            name='mphilcounters',
+            fields=[
+                ('mphilid', models.IntegerField(serialize=False, primary_key=True)),
+                ('mphiltitle', models.TextField()),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+        migrations.CreateModel(
             name='mphilresults',
             fields=[
-                ('id', models.IntegerField(serialize=False, primary_key=True)),
+                ('id', models.AutoField(default=1, serialize=False, primary_key=True)),
                 ('title', models.TextField()),
                 ('linkf', models.TextField()),
             ],
