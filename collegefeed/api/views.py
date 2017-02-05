@@ -22,12 +22,10 @@ result_resultsdict={
 	'5':ncwebresults
 }
 def results(request,category):
-	print category
 	global result_counterdict
 	category_counter=result_counterdict[category]
 	global result_resultsdict
 	category_result=result_resultsdict[category]
-	print category_counter,category_result
 	start_index=request.GET.get("from")
 	end_index=request.GET.get("to")
 	current_indexindb=category_counter.objects.all()[0].mphilid - 6
