@@ -63,5 +63,20 @@ class postgradresults(models.Model):
 	def __unicode__(self):
 	 	return self.title
 #--------------------------------------------------------
+#Tables for DiplomaResults-----------------------------
+class diplomacounters(models.Model):
+	undergradid=models.IntegerField(primary_key=True)
+	udergradtitle=models.TextField(unique=False)
+	def __unicode__(self):
+	 	return self.mphiltitle
+
+
+class diplomaresults(models.Model):
+	title=models.TextField(unique=False)
+	linkf=models.TextField(unique=False)
+	def __unicode__(self):
+	 	return self.title
+
+#-----------------------------------------------
 ##################### END OF RESULT MODELS####################
 
