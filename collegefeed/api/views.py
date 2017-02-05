@@ -10,7 +10,6 @@ def results(request):
 	start_index=request.GET.get("from")
 	end_index=request.GET.get("to")
 	current_indexindb=mphilcounters.objects.all()[0].mphilid - 6
-	print current_indexindb
 	index_range=int(end_index)-int(start_index)
 	queryset=mphilresults.objects.filter(id__range=(current_indexindb-int(end_index),current_indexindb-int(start_index))).values()
 	responseDict={}
