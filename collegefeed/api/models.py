@@ -36,7 +36,7 @@ class ncwebresults(models.Model):
 #Tables for UndergradResults-----------------------------
 class undergradcounters(models.Model):
 	undergradid=models.IntegerField(primary_key=True)
-	udergradtitle=models.TextField(unique=False)
+	undergradtitle=models.TextField(unique=False)
 	def __unicode__(self):
 	 	return self.mphiltitle
 
@@ -65,8 +65,8 @@ class postgradresults(models.Model):
 #--------------------------------------------------------
 #Tables for DiplomaResults-----------------------------
 class diplomacounters(models.Model):
-	undergradid=models.IntegerField(primary_key=True)
-	udergradtitle=models.TextField(unique=False)
+	diplomaid=models.IntegerField(primary_key=True)
+	diplomatitle=models.TextField(unique=False)
 	def __unicode__(self):
 	 	return self.mphiltitle
 
