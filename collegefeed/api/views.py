@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from api.models import mphilresults,mphilcounters,undergradresults,undergradcounters,postgradresults,postgradcounters,ncwebresults,ncwebcounters,diplomaresults,diplomacounters
+from api.models import mphilresults,mphilcounters,undergradresults,undergradcounters,postgradresults,postgradcounters,ncwebresults,ncwebcounters,diplomaresults,diplomacounters,headlines
 import json
 
 # Create your views here.
@@ -29,6 +29,9 @@ results_counterid={
 	'5':ncwebcounters.objects.all()[0].ncwebid
 	
 }
+dubeat_category={
+	'1':headlines
+}
 
 def results(request,category):
 	global result_counterdict
@@ -49,4 +52,16 @@ def results(request,category):
 	return HttpResponse(jsonResponse,content_type="application/json")
 
 ##################### END OF RESULT API #################
+
+##################### START OF DUBEATCONTENT API##################################
+def duBeatContent(request,category):
+	global dubeat_category
+	queryset=dubeat_category[category].objects.all().values()
+	responseDict={}
+	for i in range(len(queryset)):
+		responseDict[i+1]=queryset[i];
+
+	jsonResponse=json.dumps(responseDict,indent=4)
+	return HttpResponse(jsonResponse,content_type="application/json")
+
 
