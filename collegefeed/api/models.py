@@ -87,3 +87,5 @@ class headlines(models.Model):
 	linkf=models.TextField(unique=False)
 	def __unicode__(self):
 	 	return self.title
+
+#--------------------------------------------------------------------------
