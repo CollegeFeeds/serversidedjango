@@ -37,7 +37,7 @@ def results(request,category):
 	category_result=result_resultsdict[category]
 	start_index=request.GET.get("from")
 	end_index=request.GET.get("to")
-	############ PLEASE MAKE A CHANGE IN THE ID IN THE NEXT LINE############
+	global results_counterid
 	current_indexindb=results_counterid[category] - 6
 	index_range=int(end_index)-int(start_index)
 	queryset=category_result.objects.filter(id__range=(current_indexindb-int(end_index),current_indexindb-int(start_index))).values()
