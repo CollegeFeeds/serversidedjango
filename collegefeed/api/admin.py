@@ -1,5 +1,5 @@
 from django.contrib import admin
-from api.models import mphilresults,mphilcounters,undergradresults,undergradcounters,postgradresults,postgradcounters,ncwebresults,ncwebcounters,diplomaresults,diplomacounters
+from api.models import mphilresults,mphilcounters,undergradresults,undergradcounters,postgradresults,postgradcounters,ncwebresults,ncwebcounters,diplomaresults,diplomacounters,headlines
 
 
 
@@ -17,3 +17,4 @@ admin.site.register(ncwebcounters)
 
 admin.site.register(diplomaresults)
 admin.site.register(diplomacounters)
+admin.site.register(headlines)
