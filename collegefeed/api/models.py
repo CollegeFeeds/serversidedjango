@@ -22,7 +22,7 @@ class ncwebcounters(models.Model):
 	ncwebid=models.IntegerField(primary_key=True)
 	ncwebtitle=models.TextField(unique=False)
 	def __unicode__(self):
-	 	return self.mphiltitle
+	 	return self.ncwebtitle
 
 
 class ncwebresults(models.Model):

@@ -21,6 +21,15 @@ result_resultsdict={
 	'4':diplomaresults,
 	'5':ncwebresults
 }
+results_counterid={
+	'1':mphilcounters.objects.all()[0].mphilid,
+	'2':undergradcounters.objects.all()[0].undergradid,
+	'3':postgradcounters.objects.all()[0].postgradid,
+	'4':diplomacounters.objects.all()[0].diplomaid,
+	'5':ncwebcounters.objects.all()[0].ncwebid
+	
+}
+
 def results(request,category):
 	global result_counterdict
 	category_counter=result_counterdict[category]
@@ -28,7 +37,8 @@ def results(request,category):
 	category_result=result_resultsdict[category]
 	start_index=request.GET.get("from")
 	end_index=request.GET.get("to")
-	current_indexindb=category_counter.objects.all()[0].mphilid - 6
+	############ PLEASE MAKE A CHANGE IN THE ID IN THE NEXT LINE############
+	current_indexindb=results_counterid[category] - 6
 	index_range=int(end_index)-int(start_index)
 	queryset=category_result.objects.filter(id__range=(current_indexindb-int(end_index),current_indexindb-int(start_index))).values()
 	responseDict={}
