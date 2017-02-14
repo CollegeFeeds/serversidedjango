@@ -32,20 +32,6 @@ class Migration(migrations.Migration):
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-<<<<<<< HEAD
-=======
-            name='headlines',
-            fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('title', models.TextField()),
-                ('linkf', models.TextField()),
-            ],
-            options={
-            },
-            bases=(models.Model,),
-        ),
-        migrations.CreateModel(
->>>>>>> 3d25d2ba0dda045560ccf2bdf262f968ac40136e
             name='mphilcounters',
             fields=[
                 ('mphilid', models.IntegerField(serialize=False, primary_key=True)),
