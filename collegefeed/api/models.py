@@ -91,7 +91,7 @@ class diplomaresults(models.Model):
 class headlines(models.Model):
 	title=models.TextField(unique=False)
 	linkf=models.TextField(unique=False)
-	imagelink=models.TextField(unique=False)
+	imagelink=models.TextField(unique=False,default="null")
 	def __unicode__(self):
 	 	return self.title
 
