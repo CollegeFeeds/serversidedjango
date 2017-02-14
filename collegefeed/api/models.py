@@ -1,6 +1,12 @@
 from django.db import models
 
 # Create your models here.
+############################## A Table for various status such as status of change in news headline banners #################
+class status(models.Model):
+	banner_status=models.TextField(unique=False)
+
+	def __unicode__(self):
+		return "Status"
 ################### RESULTS ########################################
 #Tables for M.phil Results-----------------------------
 class mphilcounters(models.Model):
@@ -85,6 +91,7 @@ class diplomaresults(models.Model):
 class headlines(models.Model):
 	title=models.TextField(unique=False)
 	linkf=models.TextField(unique=False)
+	imagelink=models.TextField(unique=False)
 	def __unicode__(self):
 	 	return self.title
 
