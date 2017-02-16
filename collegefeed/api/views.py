@@ -29,7 +29,7 @@ results_counterid={
 	'5':ncwebcounters.objects.all()[0].ncwebid
 	
 }
-dubeat_category={
+news_category={
 	'1':headlines
 }
 
@@ -53,10 +53,10 @@ def results(request,category):
 
 ##################### END OF RESULT API #################
 
-##################### START OF DUBEATCONTENT API##################################
-def duBeatContent(request,category):
-	global dubeat_category
-	queryset=dubeat_category[category].objects.all().values()
+##################### START OF NEWSCONTENT API##################################
+def duNews(request,category):
+	global news_category
+	queryset=news_category[category].objects.all().values()
 	responseDict={}
 	for i in range(len(queryset)):
 		responseDict[i+1]=queryset[i];
