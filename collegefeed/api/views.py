@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from api.models import mphilresults,mphilcounters,undergradresults,undergradcounters,postgradresults,postgradcounters,ncwebresults,ncwebcounters,diplomaresults,diplomacounters,headlines
 import json
 
-# Create your views here.
+
   
 ################# API FUNCTION FOR RESULTS ################################################
 # A dictionary for result category used akin to switch case in this case
