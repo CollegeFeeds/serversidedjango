@@ -5,7 +5,7 @@ import json
 
 # Create your views here.
   
-################# API FUNCTION FOR RESULTS ######
+################# API FUNCTION FOR RESULTS ################################################
 # A dictionary for result category used akin to switch case in this case
 result_counterdict={
 	'1':mphilcounters,
@@ -41,7 +41,7 @@ def results(request,category):
 	start_index=request.GET.get("from")
 	end_index=request.GET.get("to")
 	global results_counterid
-	current_indexindb=results_counterid[category] - 6
+	current_indexindb=results_counterid[category] 
 	index_range=int(end_index)-int(start_index)
 	queryset=category_result.objects.filter(id__range=(current_indexindb-int(end_index),current_indexindb-int(start_index))).values()
 	responseDict={}
@@ -63,5 +63,5 @@ def duNews(request,category):
 
 	jsonResponse=json.dumps(responseDict,indent=4)
 	return HttpResponse(jsonResponse,content_type="application/json")
-
+###################### END OF DU NEWS CONTENT API ##########################
 
